@@ -11,7 +11,6 @@ docker push wafahmi/multi-api:$SHA
 docker push  wafahmi/multi-worker:$SHA 
 
 kubectl apply -f k8s
-
 kubectl set image deployments/client-deployment client=wafahmi/multi-client:$SHA
 kubectl set image deployments/server-deployment api=wafahmi/multi-api:$SHA
-kubectl set image deployments/worker-deployment worker=wafahmi/multi-worker :$SHA
+kubectl set image deployments/worker-deployment worker=wafahmi/multi-worker:$SHA
